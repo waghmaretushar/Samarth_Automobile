@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: font1;
+  src: url(/fonts/Lausanne-300.woff2);
+}
+@font-face {
+  font-family: font2;
+  src: url(/fonts/Lausanne-500.woff2);
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.moveX{
+  animation-name: moveAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.moveLink{
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
+.link:hover .moveLink{
+  opacity: 1;
+}
+
+
+@keyframes moveAnimation {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+.mailX{
+  animation-name: mailAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.mailLink{
+  opacity: 1;
+  transition: all ease 0.3s;
+}
+@keyframes mailAnimation {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+.logo {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.slick-slide > div {
+  margin: 0 10px;
+
+}
+.guest {
+  background-image: url(/src/assets/feedback/name.jpg);
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+}
+.blur {
+  background-image: url(/src/assets/feedback/name.jpg);
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  filter: blur(20px);
+}
